@@ -4,6 +4,10 @@ import { UserService } from './user.service';
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html'
+  template: `
+  <app-title></app-title>
+  <app-contact></app-contact>
+`
 })
 export class TitleComponent {
   title = 'Angular Modules';

@@ -4,15 +4,26 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AwesomePipe } from './awesome.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AwesomePipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
+  ],
+  declarations: [
+  AppComponent,
+  HighlightDirective,
+  TitleComponent,
+
+  AwesomePipe,
+  ContactComponent,
+  ContactHighlightDirective
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
