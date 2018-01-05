@@ -13,6 +13,7 @@ import { AwesomePipe } from './awesome.pipe';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     HttpModule
   ],
