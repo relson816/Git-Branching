@@ -1,23 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+/* Angular Imports */
+import { NgModule }           from '@angular/core';
+import { BrowserModule }      from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { TitleComponent } from './title.component';
+/* App Imports */
+import { AppComponent }       from './app.component';
+import { HighlightDirective } from './highlight.directive';
+import { TitleComponent }     from './title.component';
+import { UserService }        from './user.service';
+
+/* Contact Imports */
+import { ContactModule }      from './contact/contact.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HighlightDirective,
-    TitleComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports:      [ BrowserModule, ContactModule ],
+  declarations: [ AppComponent, HighlightDirective, TitleComponent ],
+  providers:    [ UserService ],
+  bootstrap:    [ AppComponent ],
 })
 export class AppModule { }
