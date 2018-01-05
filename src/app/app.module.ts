@@ -13,6 +13,7 @@ import { AwesomePipe } from './awesome.pipe';
   ],
   imports: [
     BrowserModule,
+    CoreModule.forRoot({userName: 'Miss Marple'}),
     AppRoutingModule,
     FormsModule,
     HttpModule
